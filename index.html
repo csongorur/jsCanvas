@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time line</title>
+    <link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <button type="button" id="years">Years</button>
+    <button type="button" id="mouths">Mouths</button>
+    <button type="button" id="days">Days</button>
+    <script src="js/editor.js"></script>
+    <script>
+        let canvas = document.getElementById('canvas');
+        let editor = new Editor(canvas);
+        
+        editor.years();
+
+        document.getElementById('years').addEventListener('click', () => {
+            editor.years();
+        });
+
+        document.getElementById('mouths').addEventListener('click', () => {
+            editor.mouths();
+        });
+
+        document.getElementById('days').addEventListener('click', () => {
+            editor.days();
+        });
+    </script>
+</body>
+</html>
